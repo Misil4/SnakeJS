@@ -1,3 +1,5 @@
+import genFood from "./props/food";
+import change_direction from "./control/control";
 //fruta,agrandar serpiente ,importante serpiente movimiento cuando crece
 const board_border = 'black';
 const board_background = 'white';
@@ -84,48 +86,4 @@ function move_snake() {
     };
     snake.unshift(head);
     snake.pop();
-}
-
-function change_direction(event) {
-    const LEFT_KEY = 37;
-    const RIGHT_KEY = 39;
-    const UP_KEY = 38;
-    const DOWN_KEY = 40;
-
-    const keyPressed = event.keyCode;
-    const goingUp = dy === -10;
-    const goingDown = dy === 10;
-    const goingRight = dx === 10;
-    const goingLeft = dx === -10;
-
-    if (keyPressed === LEFT_KEY && !goingRight) {
-        dx = -10;
-        dy = 0;
-    }
-    if (keyPressed === UP_KEY && !goingDown) {
-        dx = 0;
-        dy = -10;
-    }
-
-    if (keyPressed === RIGHT_KEY && !goingLeft) {
-        dx = 10;
-        dy = 0;
-    }
-    if (keyPressed === DOWN_KEY && !goingUp) {
-        dx = 0;
-        dy = 10;
-    }
-}
-
-function randomFood(min, max) {
-    return Math.round((Math.random() * (max - min) + min) / 10) * 10;
-}
-
-function genFood() {
-    food_x = randomFood(0, snakeboard.width - 10);
-    food_y = randomFood(0, snakeboard.height - 10);
-    snake.forEach(function has_snake_eaten_food(part) {
-        const has_eaten = part.x == food.x && part.y == food.y;
-        if (has_eaten) genFood();
-    });
 }
