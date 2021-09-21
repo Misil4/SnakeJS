@@ -1,0 +1,26 @@
+{
+  "name": "snakejs",
+  "version": "0.0.1",
+  "description": "A HTML/CSS/JS version of Retro Snake game made with canva.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Misil4/SnakeJS.git"
+  },
+  "keywords": [
+    "Retro",
+    "Game",
+    "Snake",
+    "Phone"
+  ],
+  "author": "Misil4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Misil4/SnakeJS/issues"
+  },
+  "homepage": "https://github.com/Misil4/SnakeJS#readme"
+}
